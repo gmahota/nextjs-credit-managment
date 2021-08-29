@@ -1,4 +1,5 @@
-import items from '../../../json/timelines.json'
+import React from "react";
+import items from "../../../json/timelines.json";
 
 export const Timeline1 = () => {
   return (
@@ -23,5 +24,5 @@ export const Timeline1 = () => {
         </div>
       ))}
     </div>
-  )
-}
+  );
+};
