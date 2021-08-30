@@ -262,7 +262,33 @@ export default function Documents({ }) {
       []
     );
 
-    return (<Datatable columns={columns} data={items} link="/product"
+    let columnsN = [{
+      id: 1,
+      date: "2021-08-31",
+      prestacoes: " 1",
+      capital: "50000",
+      juros: "0",
+      amortizacao: "1000",
+      prestacao: "1",
+    }, {
+      id: 2,
+      date: "2021-09-30",
+      prestacoes: " 1",
+      capital: "50000",
+      juros: "0",
+      amortizacao: "2000",
+      prestacao: "2"
+    }, {
+      id: 3,
+      date: "2021-09-30",
+      prestacoes: " 1",
+      capital: "50000",
+      juros: "0",
+      amortizacao: "3000",
+      prestacao: "3"
+    }]
+
+    return (<Datatable columns={columnsN} data={items} link="/product"
       canView={false} canEdit={false} />);
   };
 
