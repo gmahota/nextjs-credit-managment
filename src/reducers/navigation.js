@@ -62,10 +62,15 @@ const initialState = [
         title: "Crédito",
         items: [
           {
+            url: "/amortizacao",
+            title: "Plano de Amortização",
+            items: [],
+          },
+          {
             url: "/credit/simulator",
             title: "Simulador de Crédito",
             items: [],
-          }
+          },
         ],
       },
       {
