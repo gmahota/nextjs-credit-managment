@@ -1,4 +1,8 @@
 import React, { useState } from "react";
+import getConfig from "next/config";
+import { useRouter } from "next/router";
+import { parseCookies } from "nookies";
+
 import Link from "next/link";
 import Image from 'next/image'
 import { LockClosedIcon } from "@heroicons/react/solid";
@@ -121,5 +125,25 @@ const Index = () => {
     </Layout>
   );
 };
+
+export const getServerSideProps = async (ctx) => {
+  const { "attendance.token": token } = parseCookies(ctx);
+
+  if (!token) {
+    return {
+      redirect: {
+        destination: "/login",
+        permanent: false,
+      },
+    };
+  }
+
+  return {
+    props: {
+
+    },
+  };
+};
+
 
 export default Index;
