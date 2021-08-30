@@ -262,7 +262,7 @@ export default function Documents({ }) {
       []
     );
 
-    let columnsN = [{
+    let itemsN = [{
       id: 1,
       date: "2021-08-31",
       prestacoes: " 1",
@@ -288,7 +288,7 @@ export default function Documents({ }) {
       prestacao: "3"
     }]
 
-    return (<Datatable columns={columnsN} data={items} link="/product"
+    return (<Datatable columns={columns} data={itemsN} link="/product"
       canView={false} canEdit={false} />);
   };
 
