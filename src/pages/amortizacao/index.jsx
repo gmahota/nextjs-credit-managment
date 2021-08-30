@@ -257,6 +257,10 @@ export default function Documents({ }) {
         {
           Header: "Prestação",
           accessor: "prestacao"
+        },
+        {
+          Header: "Saldo",
+          accessor: "saldo"
         }
       ],
       []
@@ -268,24 +272,27 @@ export default function Documents({ }) {
       prestacoes: " 1",
       capital: "50000",
       juros: "0",
-      amortizacao: "1000",
+      amortizacao: "5000",
       prestacao: "1",
+      saldo: 45000
     }, {
       id: 2,
       date: "2021-09-30",
       prestacoes: " 1",
       capital: "50000",
       juros: "0",
-      amortizacao: "2000",
-      prestacao: "2"
+      amortizacao: "5000",
+      prestacao: "2",
+      saldo: 40000
     }, {
       id: 3,
       date: "2021-09-30",
       prestacoes: " 1",
       capital: "50000",
       juros: "0",
-      amortizacao: "3000",
-      prestacao: "3"
+      amortizacao: "5000",
+      prestacao: "3",
+      saldo: 35000
     }]
 
     return (<Datatable columns={columns} data={itemsN} link="/product"
