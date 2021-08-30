@@ -48,15 +48,15 @@ export default function Documents({ }) {
     { title: 'Reference Dat', element: <text>31-08-2021</text> },
     { title: 'Taxa de juro (ao ano)', element: <text>0%</text> },
     { title: 'Taxa de juro (ao mes)', element: <text>0%</text> },
-    { title: 'Prest. Juros e Capitais', element: <text>2000</text> },
+    { title: 'Prest. Juros e Capitais', element: <text>0</text> },
   ]
 
   const itemsResume = [
     { title: 'Perido da Tabela', element: <text>Mensal</text> },
     { title: 'Nr. de Meses no Ano', element: <text>12</text> },
-    { title: 'Valor do Financimanento', element: <text>0</text> },
-    { title: 'Nr. Prestação de Juros e Capital(em anos)', element: <text>0</text> },
-    { title: 'Nr. Prestação de Juros e Capital(em meses)', element: <text>0</text> },
+    { title: 'Valor do Financimanento', element: <text>50.000,00 MT</text> },
+    { title: 'Nr. Prestação de Juros e Capital(em anos)', element: <text>1</text> },
+    { title: 'Nr. Prestação de Juros e Capital(em meses)', element: <text>12</text> },
     { title: 'Nr. Prestação de Diferimento', element: <text>0</text> },
   ]
 
@@ -279,7 +279,7 @@ export default function Documents({ }) {
       id: 2,
       date: "2021-09-30",
       prestacoes: " 1",
-      capital: "50000",
+      capital: "45000",
       juros: "0",
       amortizacao: "5000",
       prestacao: "2",
@@ -288,7 +288,7 @@ export default function Documents({ }) {
       id: 3,
       date: "2021-09-30",
       prestacoes: " 1",
-      capital: "50000",
+      capital: "40000",
       juros: "0",
       amortizacao: "5000",
       prestacao: "3",
