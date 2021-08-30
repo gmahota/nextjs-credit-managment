@@ -71,40 +71,40 @@ const initialState = [
             title: "Simulador de Crédito",
             items: [],
           },
+          {
+            url: "/credit/simulator",
+            title: "Pedido de Crédito",
+            items: [],
+          },
+          {
+            url: "/credit/simulator",
+            title: "Validação Crédito",
+            items: [],
+          },
+          {
+            url: "/credit/simulator",
+            title: "Avaliação de Muturios",
+            items: [],
+          },
         ],
       },
       {
         url: "/",
         icon: <FiSettings size={20} />,
-        title: "Settings",
+        title: "Definições",
         badge: {
           color: "bg-indigo-500 text-white",
           text: 6,
         },
         items: [
           {
-            url: "/products",
-            title: "Products",
-            items: [],
-          },
-          {
             url: "/customers",
-            title: "Customer's",
+            title: "Cadastro de Mutuario",
             items: [],
           },
           {
-            url: "/projects",
-            title: "Project's",
-            items: [],
-          },
-          {
-            url: "/companies",
-            title: "Companies",
-            items: [],
-          },
-          {
-            url: "/typedoc",
-            title: "Type Document",
+            url: "/products",
+            title: "Tipo de Crédito",
             items: [],
           },
         ],
