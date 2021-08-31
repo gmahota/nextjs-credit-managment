@@ -13,10 +13,7 @@ import {
   FiCopy,
   FiUser,
   FiPieChart,
-  FiCompass,
-  FiHelpCircle,
-  FiShoppingCart,
-  FiHome,
+  FiCompass
 } from "react-icons/fi";
 
 const initialState = [
