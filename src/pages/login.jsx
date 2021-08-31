@@ -126,24 +126,4 @@ const Index = () => {
   );
 };
 
-export const getServerSideProps = async (ctx) => {
-  const { "attendance.token": token } = parseCookies(ctx);
-
-  if (!token) {
-    return {
-      redirect: {
-        destination: "/login",
-        permanent: false,
-      },
-    };
-  }
-
-  return {
-    props: {
-
-    },
-  };
-};
-
-
 export default Index;
