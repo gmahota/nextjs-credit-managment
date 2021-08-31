@@ -1,4 +1,8 @@
 import React from "react";
+import getConfig from "next/config";
+import { useRouter } from "next/router";
+import { parseCookies } from "nookies";
+
 import Widget1 from "../components/elements/dashboard/widget-1";
 import Section from "../components/elements/dashboard/section";
 import SectionTitle from "../components/elements/dashboard/section-title";
