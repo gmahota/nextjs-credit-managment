@@ -14,7 +14,7 @@ import { FiEdit, FiPrinter, FiSend, FiTrash } from 'react-icons/fi';
 import { AiFillFileExcel, AiFillFilePdf } from "react-icons/ai"
 
 //Services
-import candidatesService from "../../../services/candidates";
+import borrowersService from "../../../services/borrowers";
 
 export default function Candidate({ candidate }) {
   const router = useRouter();
@@ -305,7 +305,7 @@ export const getServerSideProps = async (ctx) => {
 
   const { id } = ctx.params;
 
-  const candidate = await candidatesService.get_Candidate(id);
+  const candidate = await borrowersService.get_Borrower(id);
 
   return {
     props: {
