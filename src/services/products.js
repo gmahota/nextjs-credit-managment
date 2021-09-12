@@ -1,24 +1,14 @@
-import getConfig from "next/config";
-
-// Only holds serverRuntimeConfig and publicRuntimeConfig
-const { serverRuntimeConfig, publicRuntimeConfig } = getConfig();
+import Repository, { baseUrl, serializeQuery } from "./Repository";
 
 const get_Products = async (filter) => {
   try {
-    const url = publicRuntimeConfig.SERVER_URI + "api/base/products";
-
     let res = [];
 
-    await fetch(url, {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(filter),
-    })
-      .then((response) => response.json())
-      .then((data) => (res = data));
+    await Repository.get(`${baseUrl}/products`).then(
+      (response) => (res = response.data)
+    );
 
+    console.log(res);
     return res;
   } catch (e) {
     console.error(e);
@@ -27,13 +17,11 @@ const get_Products = async (filter) => {
 
 const get_Product = async (id) => {
   try {
-    const url = publicRuntimeConfig.SERVER_URI + `api/base/products/${id}`;
+    const url = `${baseUrl}/products/${id}`;
 
     let res = {};
 
-    await fetch(url)
-      .then((response) => response.json())
-      .then((data) => (res = data));
+    await Repository.get(url).then((response) => (res = response.data));
 
     return res;
   } catch (e) {

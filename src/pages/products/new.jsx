@@ -7,50 +7,47 @@ import { parseCookies } from "nookies";
 import SectionTitle from '../../components/elements/section-title/index';
 import Widget from '../../components/elements/widget/index';
 import FormValidation from './../../components/elements/forms/validation';
+import Repository, { baseUrl, serializeQuery } from "../../services/Repository";
 
 // Only holds serverRuntimeConfig and publicRuntimeConfig
 const { serverRuntimeConfig, publicRuntimeConfig } = getConfig();
 
 
 export default function Schools() {
-  
+
   const router = useRouter(); //vai buscar o router
 
   const onSubmit = async (data) => {
-    
+
     const url = publicRuntimeConfig.SERVER_URI + `api/base/products`;
 
-    const response = await fetch(url,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body:  JSON.stringify(data),
-      }
-    );
-
-    router.push("/products")
+    await Repository.post(`${baseUrl}/products`, data)
+      .then(
+        router.push("/products")
+      ).catch(function (error) {
+        console.log(error);
+        alert("Ocorreu um erro durante a gravação")
+      });
   }
 
   let items = [
     {
       label: 'Code',
-      error: {required: 'Please enter your code'},
+      error: { required: 'Please enter your code' },
       name: 'code',
       type: 'text',
       placeholder: 'Enter the code'
     },
     {
-      label: 'Description',
-      error: {required: 'Please enter your description'},
-      name: 'description',
+      label: 'Name',
+      error: { required: 'Please enter your description' },
+      name: 'name',
       type: 'text',
       placeholder: 'Enter the description'
     },
     {
       label: 'Price',
-      error: {required: 'Please enter the price'},
+      error: { required: 'Please enter the price' },
       name: 'price',
       type: 'number',
       placeholder: 'Enter the price'
@@ -66,10 +63,10 @@ export default function Schools() {
         description=""
         right=""
       >
-      <FormValidation items={items} onSubmit={onSubmit}/>
-    </Widget>
-     
-      
+        <FormValidation items={items} onSubmit={onSubmit} />
+      </Widget>
+
+
     </>)
 }
 

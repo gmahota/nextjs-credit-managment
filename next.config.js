@@ -17,10 +17,11 @@ module.exports = withTM({
     // Will only be available on the server side
     mySecret: "secret",
     SERVER_URI: process.env.SERVER_URI, // Pass through env variables
+    Auth: process.env.Auth,
   },
   publicRuntimeConfig: {
     // Will be available on both server and client
     SERVER_URI: process.env.SERVER_URI,
-    BioStar_Url: process.env.BioStar_Url,
+    Auth: process.env.Auth,
   },
 });
