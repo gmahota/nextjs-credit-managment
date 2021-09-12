@@ -37,9 +37,9 @@ export default function Schools() {
       placeholder: 'Enter the code'
     },
     {
-      label: 'Name',
+      label: 'Description',
       error: { required: 'Please enter your description' },
-      name: 'name',
+      name: 'description',
       type: 'text',
       placeholder: 'Enter the description'
     }
