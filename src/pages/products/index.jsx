@@ -33,10 +33,6 @@ export default function Schools({
         {
           Header: "Description",
           accessor: "description"
-        },
-        {
-          Header: "Price",
-          accessor: "price",
         }
       ],
       []
@@ -47,17 +43,17 @@ export default function Schools({
       handlerEdit={handlerEdit} />;
   };
 
-  function handlerEdit(id){
+  function handlerEdit(id) {
     router.push(`products/${id}/edit`)
   }
 
-  function handlerAddNew(){
+  function handlerAddNew() {
     router.push("products/new")
   }
 
   return (
     <>
-      <SectionTitle title="Tables" subtitle="Product's" />
+      <SectionTitle title="Lista" subtitle="Tipo de Crédito" />
       <Widget
         title=""
         description=""
@@ -68,7 +64,7 @@ export default function Schools({
             onClick={handlerAddNew}>
 
             <FiPlus className="stroke-current text-white" size={18} />
-            <span>Add New</span>
+            <span>Novo</span>
           </button>
         }
       >

@@ -13,7 +13,7 @@ import {
   FiCopy,
   FiUser,
   FiPieChart,
-  FiCompass
+  FiCompass,
 } from "react-icons/fi";
 
 const initialState = [
@@ -95,7 +95,7 @@ const initialState = [
         },
         items: [
           {
-            url: "/customers",
+            url: "/borrowers",
             title: "Cadastro de Mutuario",
             items: [],
           },
